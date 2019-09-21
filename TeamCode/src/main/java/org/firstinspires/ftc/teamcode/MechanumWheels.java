@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.robotcontroller.external.samples;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
@@ -9,7 +9,7 @@ import com.qualcomm.robotcore.util.Range;
 
 @TeleOp(name="Basic: Iterative OpMode", group="Iterative Opmode")
 
-public class BasicOpMode_Iterative extends OpMode
+public class MechanumWheels extends OpMode
 {
     //Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
@@ -61,10 +61,11 @@ public class BasicOpMode_Iterative extends OpMode
         double leftRearPower;
         double rightRearPower;
 //test
-        leftFrontPower = left_stick_x + left_stick_y + right_stick_x;
-        rightFrontPower = -left_stick_x + left_stick_y - right_stick_x;
-        leftRearPower = -left_stick_x + left_stick_y + right_stick_x;
-        rightRearPower = left_stick_x + left_stick_y - right_stick_x;
+        //-gamepad1.left_stick_y
+        leftFrontPower = gamepad1.left_stick_x + gamepad1.left_stick_y + gamepad1.right_stick_x;
+        rightFrontPower = -gamepad1.left_stick_x + gamepad1.left_stick_y - gamepad1.right_stick_x;
+        leftRearPower = -gamepad1.left_stick_x + gamepad1.left_stick_y + gamepad1.right_stick_x;
+        rightRearPower = gamepad1.left_stick_x + gamepad1.left_stick_y - gamepad1.right_stick_x;
 
         // Send calculated power to wheels
         leftFront.setPower(leftFrontPower);
