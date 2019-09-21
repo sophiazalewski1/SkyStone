@@ -60,7 +60,7 @@ public class BasicOpMode_Iterative extends OpMode
         double rightFrontPower;
         double leftRearPower;
         double rightRearPower;
-
+//test
         leftFrontPower = left_stick_x + left_stick_y + right_stick_x;
         rightFrontPower = -left_stick_x + left_stick_y - right_stick_x;
         leftRearPower = -left_stick_x + left_stick_y + right_stick_x;
